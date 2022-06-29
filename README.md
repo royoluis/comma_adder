@@ -1,7 +1,7 @@
 # comma_adder
 
 This plugin takes a list (check "list.txt" file) and returns that list with commas between the numbers. 
-This action could be useful to create arrays or SQL queries from the numbers provided in list.txt. 
+This action could be useful to create arrays or SQL queries from the numbers provided in "list.txt". 
 
 Instructions:
 
