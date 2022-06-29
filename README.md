@@ -7,8 +7,8 @@ Instructions:
 
 -1- Add the numbers you wish to "list.txt" file (it's necessary a carriage return after each number).
 
--2- Save the changes in "list.txt"
+-2- Save the changes in "list.txt".
 
--3- Run the following command: "php index.php"
+-3- Run the following command: "php index.php".
 
-You will see the list with commas in your terminal
+You will see the list with commas in your terminal.
