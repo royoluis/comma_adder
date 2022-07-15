@@ -7,6 +7,6 @@ $newList->fileName = 'list.txt';
 
 $newList->fileList = $newList->getList();
 
-print("\n" . $newList->addcomma() . "\n");
+print("\n" . $newList->addcomma() . "\n" . "end of list" . "\n" . "number of elements: " . count($newList->fileList) . "\n");
 
 ?>
