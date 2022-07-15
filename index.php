@@ -5,7 +5,7 @@ $newList = new CommaAdder();
 
 $newList->fileName = 'list.txt';
 
-$newList->fileList = $newList->getList();
+$newList->fileList = array_unique($newList->getList());
 
 print("\n" . $newList->addcomma() . "\n" . "end of list" . "\n" . "number of elements: " . count($newList->fileList) . "\n");
 
