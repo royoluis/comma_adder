@@ -7,16 +7,23 @@ class CommaAdder {
 
     public function getList() {
         $fileList = [];
-        if ($file = fopen($this->fileName, "r")) {
-            while(!feof($file)) {
-                $number = fgets($file);
-                if (is_numeric(trim($number))) {
-                    $fileList[] = $number;
+        try {
+            if (file_exists($this->fileName) && $file = fopen($this->fileName, "r")) {
+                while(!feof($file)) {
+                    $number = fgets($file);
+                    if (is_numeric(trim($number))) {
+                        $fileList[] = $number;
+                    }
                 }
+                fclose($file);
+                return $fileList;
             }
-            fclose($file);
+            throw new Exception('Error: the file' . $this->fileName . ' does not exist.');
         }
-        return $fileList;
+        catch (Exception $e) {
+            print("\n" . $e->getMessage() . "\n");
+            die();
+        }
     }
 
     public function addcomma() {
@@ -33,7 +40,9 @@ class CommaAdder {
             throw new Exception('Error: Invalid list. Please use a correct array.');
         }
         catch (Exception $e) {
-            print("\n" . $e->getMessage());
+            print("\n" . $e->getMessage() . "\n");
+            die();
         }
     }
 }
+
