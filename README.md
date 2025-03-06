@@ -12,5 +12,3 @@ Instructions:
 -3- Run the following command: "php index.php".
 
 You will see the list with commas in your terminal.
-
-IMPORTANT: This plugin does not have a final version.
